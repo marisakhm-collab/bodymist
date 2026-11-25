@@ -1,0 +1,102 @@
+[
+  {
+    "id": "bs-fresh-30",
+    "name": "Body Scent Fresh Body Spray 30ml",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/fresh.jpg",
+    "description": "สเปรย์น้ำหอมไซส์พกพาที่ให้กลิ่นโปร่งสะอาด สดชื่น เบาสบาย เหมาะสำหรับทดลองใช้หรือเติมความตื่นตัวระหว่างวัน"
+  },
+  {
+    "id": "bs-fresh-100",
+    "name": "Body Scent Fresh Body Spray 100ml",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/fresh.jpg",
+    "description": "สเปรย์น้ำหอมขวดใหญ่สำหรับใช้ประจำวัน ให้ความรู้สึกสดชื่น โปร่ง สะอาด เบาสบายได้ยาวนานตลอดวัน"
+  },
+  {
+    "id": "bs-sweet-30",
+    "name": "Body Scent Sweet Body Spray 30ml",
+    "mood": "sweet",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/sweet.jpg",
+    "description": "สเปรย์น้ำหอมขนาดทดลองกลิ่นหวานละมุนแผ่วเบา ให้ความรู้สึกน่ารัก อ่อนโยน และสบายใจในทุกครั้งที่ฉีด"
+  },
+  {
+    "id": "bs-sweet-100",
+    "name": "Body Scent Sweet Body Spray 100ml",
+    "mood": "sweet",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/sweet.jpg",
+    "description": "สเปรย์น้ำหอมไซส์ปกติกลิ่นหวานละมุนอ่อนโยน มอบความรู้สึกน่ารัก อบอุ่น และสบายใจได้ทุกวันที่ต้องการ"
+  },
+  {
+    "id": "bs-confident-30",
+    "name": "Body Scent Confident Body Spray 30ml",
+    "mood": "confident",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/confident.jpg",
+    "description": "สเปรย์น้ำหอมไซส์เล็กกลิ่นสะอาดสุขุม ช่วยเพิ่มความรู้สึกนิ่ง ดูดี และพร้อมเจอผู้คนได้ง่ายในทุกโอกาส"
+  },
+  {
+    "id": "bs-confident-100",
+    "name": "Body Scent Confident Body Spray 100ml",
+    "mood": "confident",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/confident.jpg",
+    "description": "สเปรย์น้ำหอมขวดใหญ่กลิ่นสะอาดดูดี เสริมความนิ่งและความน่าเชื่อถือให้พร้อมรับมือทุกวันทำงานและการพบปะ"
+  },
+  {
+    "id": "bs-romance-30",
+    "name": "Body Scent Romance Body Spray 30ml",
+    "mood": "romance",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/romance.jpg",
+    "description": "สเปรย์น้ำหอมขนาดพกพากลิ่นอบอุ่นชวนหลงใหล ให้ความหวานมีเสน่ห์ลึกขึ้น เหมาะสำหรับลองใช้ในวันพิเศษ"
+  },
+  {
+    "id": "bs-romance-100",
+    "name": "Body Scent Romance Body Spray 100ml",
+    "mood": "romance",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/romance.jpg",
+    "description": "สเปรย์น้ำหอมขนาดใช้งานจริงกลิ่นอบอุ่นน่าหลงใหล ให้ความหวานมีเสน่ห์ชวนจดจำในทุกช่วงเวลาสำคัญ"
+  },
+  {
+    "id": "bs-rollon-fresh",
+    "name": "Body Scent Fresh Roll-on",
+    "mood": "fresh",
+    "type": "rollon",
+    "size": "50ml",
+    "price": 149,
+    "image": "images/fresh.jpg",
+    "description": "โรลออนกลิ่นสดชื่นโปร่งสะอาด เบาสบาย ช่วยให้รู้สึกตื่นตัวและมั่นใจในความสดใสได้ตลอดวัน"
+  },
+  {
+    "id": "bs-rollon-sweet",
+    "name": "Body Scent Sweet Roll-on",
+    "mood": "sweet",
+    "type": "rollon",
+    "size": "50ml",
+    "price": 149,
+    "image": "images/sweet.jpg",
+    "description": "โรลออนกลิ่นหวานละมุนแผ่วเบา มอบความรู้สึกอ่อนโยน น่ารัก และอบอุ่นสบายใจอย่างเป็นธรรมชาติ"
+  }
+]

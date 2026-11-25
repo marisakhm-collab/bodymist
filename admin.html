@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จัดการคำสั่งซื้อ — Body Scent Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .admin-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-light);
+    }
+
+    #ordersTable {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+      min-width: 780px;
+    }
+
+    #ordersTable thead {
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    #ordersTable th {
+      padding: 1.15rem 1.25rem;
+      font-weight: 500;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+    #ordersTable td {
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    #ordersTable tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    #ordersTable tbody tr:hover {
+      background-color: var(--bg-primary);
+    }
+
+    @media (max-width: 768px) {
+      .admin-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">Body Scent</a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="admin.html" class="active">หลังบ้าน</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Admin Orders Table -->
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Order Management</span>
+        <h1>รายการคำสั่งซื้อทั้งหมด</h1>
+        <hr class="divider">
+        <p>ข้อมูลคำสั่งซื้อจากลูกค้า เรียงลำดับจากรายการล่าสุดขึ้นก่อน</p>
+      </div>
+
+      <div class="admin-toolbar">
+        <span class="admin-note">* ข้อมูลซิงก์อัตโนมัติจากฐานข้อมูลคำสั่งซื้อ</span>
+        <button type="button" class="btn btn-sm" onclick="location.reload()">รีเฟรชข้อมูล</button>
+      </div>
+
+      <div class="table-wrap">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>วันเวลา</th>
+              <th>ชื่อลูกค้า</th>
+              <th>เบอร์โทร / Line</th>
+              <th>รายการสินค้า</th>
+              <th>จำนวนเงินรวม</th>
+              <th>หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <span>&copy; 2026 Body Scent. Admin Portal.</span>
+        <span>Minimalist Fragrance Collection</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

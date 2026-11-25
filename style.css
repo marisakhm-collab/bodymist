@@ -1,0 +1,607 @@
+/* ==========================================================================
+   BODY SCENT - Minimalist Luxury Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&family=Prompt:wght@300;400;500&display=swap');
+
+:root {
+  /* Core Palette - Warm Off-White, Cream & Deep Beige */
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #F3EFEA;
+  --bg-surface: #FFFFFF;
+  --bg-beige-dark: #E6DFD5;
+
+  /* Text Colors */
+  --text-primary: #262320;
+  --text-secondary: #635D56;
+  --text-muted: #948C82;
+
+  /* Accent & Borders */
+  --accent-gold: #B0926A;
+  --accent-gold-hover: #967A54;
+  --border-light: rgba(38, 35, 32, 0.12);
+  --border-dark: rgba(38, 35, 32, 0.35);
+
+  /* Subtle Mood Accents (Muted & Refined) */
+  --mood-fresh: #2E4F44;      /* เขียวเข้ม */
+  --mood-sweet: #745B7A;      /* ม่วงกลาง */
+  --mood-confident: #2F4254;  /* น้ำเงินเทาเข้ม */
+  --mood-romance: #A85D63;    /* แดงอ่อน */
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing & Layout */
+  --container-max: 1200px;
+  --section-space: 110px;
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, .brand-logo, .serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 1.45rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Layout & Containers
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: var(--section-space) 0;
+}
+
+.section-cream {
+  background-color: var(--bg-secondary);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 4.5rem;
+}
+
+.section-header p {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background-color: var(--accent-gold);
+  margin: 1.5rem auto;
+  border: none;
+}
+
+/* ==========================================================================
+   Navigation Header
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.brand-logo {
+  font-size: 1.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-gold);
+  transition: var(--transition-smooth);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Buttons & Interactive Elements (Thin Borders, Muted Tones)
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-dark);
+  background-color: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn:hover {
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-gold {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--bg-surface);
+}
+
+.btn-solid {
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-solid:hover {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--bg-surface);
+}
+
+.btn-sm {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.76rem;
+}
+
+/* ==========================================================================
+   Filter Pills / Tabs
+   ========================================================================== */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 3.5rem;
+}
+
+.filter-btn {
+  padding: 0.55rem 1.35rem;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+}
+
+/* ==========================================================================
+   Subtle Mood Indicators (Dots, Underlines, Icons Only)
+   ========================================================================== */
+
+.mood-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mood-dot.fresh     { background-color: var(--mood-fresh); }
+.mood-dot.sweet     { background-color: var(--mood-sweet); }
+.mood-dot.confident { background-color: var(--mood-confident); }
+.mood-dot.romance   { background-color: var(--mood-romance); }
+
+.mood-underline {
+  display: inline-block;
+  padding-bottom: 0.35rem;
+  border-bottom: 1.5px solid transparent;
+}
+
+.mood-underline.fresh     { border-bottom-color: var(--mood-fresh); }
+.mood-underline.sweet     { border-bottom-color: var(--mood-sweet); }
+.mood-underline.confident { border-bottom-color: var(--mood-confident); }
+.mood-underline.romance   { border-bottom-color: var(--mood-romance); }
+
+.mood-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Product Grid & Minimalist Cards
+   ========================================================================== */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2.25rem;
+}
+
+.product-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.product-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-4px);
+}
+
+.product-image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.04);
+}
+
+.product-type-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(250, 248, 245, 0.9);
+  border: 1px solid var(--border-light);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.product-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.product-size {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.product-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.product-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.product-price {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Form Inputs (Clean Line Style)
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  padding: 5rem 0 2.5rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.footer-heading {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  :root {
+    --section-space: 80px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.35rem;
+  }
+
+  .navbar {
+    height: 72px;
+  }
+
+  .nav-links {
+    gap: 1.35rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
